@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styledemo.css" />
+    <title>Booking Details</title>
+    <link rel="icon" type="image/gif" href="img/logo.jpg" />
+    <script>
+        function validateForm() {
+            var phone = /^[-+]?[0-9]+$/;
+            var x = document.forms["reg"]["name"].value;
+            var y = document.forms["reg"]["contact"].value;
+            var idate = document.forms["reg"]["issuedate"].value;
+            var rdate = document.forms["reg"]["returndate"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            } else if (no != phone) {
+                alert("No. is Invalid");
+            } else {
+                return true;
+            }
+            if (idate <= rdate) {
+                alert("Issue date must be less than return date");
+            } else {
+                return false;
+            }
+        }
+
+        function Onsubmission() {
+            alert("You've successfully booked your ride");
+        }
+    </script>
+
+</head>
+
+<body class="container">
+    <header>
+        <div class="logo2">
+            <img src="img/logo.jpg" alt="logo"><br>
+            <h3>Booking Details</h3>
+        </div>
+    </header>
+    <div class="form-field">
+        <form name="reg" onsubmit="validateForm()">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Your name..">
+
+            <label>Contact Number</label>
+            <input type="text" id="contact" placeholder="Contact no...">
+
+            <label>Issue Date</label>
+            <input type="date" id="issuedate" placeholder="Issue Date...">
+            <label>Return Date</label>
+            <input type="date" id="returndate" placeholder="Return Date...">
+            <input type="button" class="button4" value="Back">
+            <input type="submit" value="Submit">
+        </form>
+    </div><br>
+    <hr color="gold">
+    <br>
+    <footer>
+        <h3>RentVroom</h3><br>
+        <p>Rentvroom Pvt. Ltd.</p><br>
+        <p>No:296, 3rd Cross Road, Jakkasandra, 1st Block, Koramangla</p>
+        <p>Bengaluru, Karnataka 560034</p>
+        </br>
+        <i class="fab fa-linkedin"></i>&nbsp; &nbsp;
+        <i class="fab fa-instagram"></i>&nbsp; &nbsp;
+        <i class="fab fa-twitter"></i><br>
+        <nav style="font-size: 11px;">
+            <ul type="none" class="left-footer">
+                <li><button class="button3">Home</button></li>
+                <li><button class="button3">Contact</button class="button"></li>
+                <li><button class="button3">About</button class="button"></li>
+            </ul>
+            <ul type="none" class="right-footer">
+                <li><button class="button3">Privacy Policy</button></li>
+                <li><button class="button3">Terms of Services</button class="button"></li>
+            </ul>
+        </nav style="font-size: 10px;">
+    </footer>
+</body>
+
+</html>
